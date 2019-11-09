@@ -1,6 +1,14 @@
-.todo-create-form{
+:root{
+  --todo-form-background: white;
+}
 
-  background-color: black;
+.todo-form{
+  background-color: var(--todo-form-background);
+  padding: .5em;
+
+  &--dark{
+    --todo-form-background: black;
+  }
 
   > *+* {
     margin-top: .2em;
@@ -19,12 +27,5 @@
     &:hover {
       box-shadow: 0 0 .4em 0 rgba(0,0,0,0.75);
     }
-  }
-
-  &__submit{
-    background: linear-gradient(135deg, rgba(152,224,159,1) 0%, rgba(76,133,29,1) 100%);
-    border: none;
-    border-radius: .25em;
-    padding: .2em .5em;
   }
 }

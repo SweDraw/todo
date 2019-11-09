@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import Filter from "./filter";
 import {TodoTopBarReduxProps} from "../container/todo-top-bar";
 import HideComponent from "./hide-component";
-import TodoCreateForm from "../container/todo-create-form";
+import TodoCreateForm from "../container/todo-form";
 
 export type TodoTopBarProps = {
 

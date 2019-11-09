@@ -18,18 +18,22 @@ const HideComponent: FC<HideComponentProps> =
    }) => {
     const [show, setShow] = useState(false);
 
-    const ShowTransition = (className: string, children: ReactNode) =>
-      useTransition(show, null, {
-        from: {opacity: 0},
-        enter: {opacity: 1},
-        leave: {opacity: 0}
-      })
-        .map(({item, key, props}) =>
+    const showComponent = () => setShow(true);
+    const hideComponent = () => setShow(false);
+
+    const ShowTransition =
+      (className: string, children: ReactNode) =>
+        useTransition(show, null, {
+          from: {opacity: 0},
+          enter: {opacity: 1},
+          leave: {opacity: 0}
+        }).map(({item, key, props}) =>
           item && (
             <a.section
               className={`${className}`}
               key={key}
               style={props}
+              onClick={() => hideComponent()}
             >
               {children}
             </a.section>
@@ -40,7 +44,7 @@ const HideComponent: FC<HideComponentProps> =
       <>
         <button
           className={`hide-component__show-button ${showButtonClass}`}
-          onClick={() => setShow(true)}
+          onClick={() => showComponent()}
         >
           <FaTimes/>
         </button>
@@ -50,7 +54,7 @@ const HideComponent: FC<HideComponentProps> =
           (<section className={`hide-component__container ${hideButtonClass}`}>
             <button
               className="hide-component__hide-button"
-              onClick={() => setShow(false)}
+              onClick={() => hideComponent()}
             >
               <FaTimes/>
             </button>
