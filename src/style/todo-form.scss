@@ -1,0 +1,30 @@
+.todo-create-form{
+
+  background-color: black;
+
+  > *+* {
+    margin-top: .2em;
+  }
+
+  // * Field container
+  &__input-section{
+
+  }
+
+  &__field{
+    padding: .25em;
+    margin: .25em;
+    transition: box-shadow .35s;
+
+    &:hover {
+      box-shadow: 0 0 .4em 0 rgba(0,0,0,0.75);
+    }
+  }
+
+  &__submit{
+    background: linear-gradient(135deg, rgba(152,224,159,1) 0%, rgba(76,133,29,1) 100%);
+    border: none;
+    border-radius: .25em;
+    padding: .2em .5em;
+  }
+}

@@ -1,45 +1,66 @@
 import React, {FC, ReactNode, useState} from "react";
 import {FaTimes} from 'react-icons/fa';
-import {animated as a, useSpring} from "react-spring";
+import {animated as a, useTransition} from "react-spring";
+
+import '../style/hide-component.scss';
 
 export type HideComponentProps = {
   WrappedComponent: ReactNode;
+  showButtonClass?: string;
+  hideButtonClass?: string;
 }
 
-const HideComponent: FC<HideComponentProps> = ({WrappedComponent}) => {
-  const [isShow, setShow] = useState(false);
-  const [props, set] = useSpring(() => ({opacity: 0}));
-// Update spring with new props
-  set({opacity: isShow ? 1 : 0});
+const HideComponent: FC<HideComponentProps> =
+  ({
+     WrappedComponent,
+     hideButtonClass = '',
+     showButtonClass = ''
+   }) => {
+    const [show, setShow] = useState(false);
 
-  return (
-    <>
-      <button
-        className="hide-component__show"
-        onClick={() => setShow(true)}
-      >
-        <FaTimes/>
-      </button>
+    const ShowTransition = (className: string, children: ReactNode) =>
+      useTransition(show, null, {
+        from: {opacity: 0},
+        enter: {opacity: 1},
+        leave: {opacity: 0}
+      })
+        .map(({item, key, props}) =>
+          item && (
+            <a.section
+              className={`${className}`}
+              key={key}
+              style={props}
+            >
+              {children}
+            </a.section>
+          ));
 
-      <a.section
-        style={props}
-        className="hide-component__wrapper"
-        onAnimationEnd={() => console.log('End')}
-      >
-        <section className="hide-component__container">
-          <button
-            className="hide-component__display"
-            onClick={() => setShow(false)}
-          >
-            <FaTimes/>
-          </button>
-          <article className="hide-component__element">
-            {WrappedComponent}
-          </article>
-        </section>
-      </a.section>
-    </>
-  )
-};
+
+    return (
+      <>
+        <button
+          className={`hide-component__show-button ${showButtonClass}`}
+          onClick={() => setShow(true)}
+        >
+          <FaTimes/>
+        </button>
+
+        {ShowTransition(
+          "hide-component__wrapper",
+          (<section className={`hide-component__container ${hideButtonClass}`}>
+            <button
+              className="hide-component__hide-button"
+              onClick={() => setShow(false)}
+            >
+              <FaTimes/>
+            </button>
+            <article className="hide-component__element">
+              {WrappedComponent}
+            </article>
+          </section>)
+        )}
+      </>
+    )
+  };
 
 export default HideComponent;

@@ -1,0 +1,57 @@
+:root{
+  // * hide component background
+  --hide-component-background: white;
+  --hide-wrapper-background:rgba(58, 55, 55, 0.55);
+  // * Hide button parameter
+  --hide-button-background: initial;
+  --hide-button-color: black;
+  // * Show button
+  --show-button-background: lightgreen;
+  --show-button-color: white;
+}
+
+.hide-component {
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+    background-color: var(--hide-wrapper-background);
+  }
+
+  &__container {
+    background-color: var(--hide-component-background);
+    padding: .25em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    > *+* {
+      margin-top: .25em;
+    }
+  }
+
+  &__element {
+    padding: .25em;
+  }
+
+  &__show-button {
+    border: none;
+    background-color: var(--show-button-background);
+    color: var(--show-button-color);
+  }
+
+  &__hide-button {
+    border: none;
+    background-color: var(--hide-button-background);
+    color: var(--hide-button-color);
+  }
+}
