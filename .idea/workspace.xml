@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d543b4ac-9c0a-4c6e-9ef3-7939bc36fe9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/text-field.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/_theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/field.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/root.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/todo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/filter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/hide-component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/hide-component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/todo-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/todo-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/todo-top-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/todo-top-bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/todo-form.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/todo-form.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/todo-top-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/todo-top-bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/text-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/text-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/theme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/theme.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/field.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/field.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/hide-component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/hide-component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/todo-form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/todo-form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/root.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/root.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +106,7 @@
       <workItem from="1573051329013" duration="1410000" />
       <workItem from="1573052873888" duration="13090000" />
       <workItem from="1573069261263" duration="10492000" />
-      <workItem from="1573188358281" duration="36910000" />
+      <workItem from="1573188358281" duration="41952000" />
     </task>
     <task id="LOCAL-00001" summary="Start styled project">
       <created>1573188952870</created>
@@ -142,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573331157113</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add redux-form. Change todo-form to redux-form. Remove context from element. Set style from theme in app component.">
+      <created>1573382936111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573382936111</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +160,7 @@
     <MESSAGE value="Add normalize.css and add style from hide-component element. Start styled todo-form." />
     <MESSAGE value="Add theme redux. Add button with animation." />
     <MESSAGE value="Change redux Theme from context Theme. Update hide-component. Add to elements theme context." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change redux Theme from context Theme. Update hide-component. Add to elements theme context." />
+    <MESSAGE value="Add redux-form. Change todo-form to redux-form. Remove context from element. Set style from theme in app component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add redux-form. Change todo-form to redux-form. Remove context from element. Set style from theme in app component." />
   </component>
 </project>

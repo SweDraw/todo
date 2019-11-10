@@ -1,3 +1,52 @@
-.field{
+:root {
+  --field-main-color: black;
+  --field-hover-color: blue;
+  --field-animation-time: .5s;
+}
 
+$hover-font-size: .8;
+$hover-bottom-position: 1/$hover-font-size;
+
+.field {
+  $this: &;
+  position: relative;
+  outline: none;
+  background: none;
+  font-size: var(--font-size);
+
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    left: .5em;
+    color: var(--field-main-color);
+    transition: all ease-in-out var(--field-animation-time);
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 2px solid var(--field-main-color);
+    transition: border-bottom-color ease-in-out var(--field-animation-time);
+    margin-top: #{$hover-font-size + .1}em;
+    -webkit-appearance: none;
+
+    &:not(:placeholder-shown) ~ #{$this}__text {
+      bottom: #{$hover-bottom-position + .1}em;
+      font-size: #{$hover-font-size}em;
+      left: 0;
+      color: var(--field-main-color);
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom-color: var(--field-hover-color);
+
+      & ~ #{$this}__text {
+        bottom: #{$hover-bottom-position + .1}em;
+        font-size: #{$hover-font-size}em;
+        left: 0;
+        color: var(--field-hover-color);
+      }
+    }
+  }
 }
