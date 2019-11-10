@@ -1,7 +1,5 @@
 // * Lib
-import React, {FC, useContext} from "react";
-// * Context
-import {ThemeContext} from "../context/theme";
+import React, {FC, ButtonHTMLAttributes} from "react";
 // * Style
 import '../style/button.scss';
 
@@ -10,30 +8,30 @@ export enum ColorType {
   green = "green"
 }
 
-export type ButtonProps = {
-  handleClick: () => void;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
   buttonText: string;
   colorHover?: ColorType;
 }
 
-const Button: FC<ButtonProps> = (
-  {
-    handleClick,
-    buttonText,
-    className = '',
-    colorHover = "blue"
-  }) => {
-  const theme = useContext(ThemeContext);
+const Button: FC<ButtonProps> =
+  ({
+     buttonText,
+     type = "button",
+     className = '',
+     colorHover = "blue",
+    ...parameterButton
+   }) => {
 
-  return (
-    <button
-      className={`button button--theme-${theme} button--background-${colorHover} ${className}`.trim()}
-      onClick={() => handleClick()}
-    >
-      {buttonText}
-    </button>
-  )
-};
+    return (
+      <button
+        className={`button button--${colorHover} ${className}`.trim()}
+        type={type}
+        {...parameterButton}
+      >
+        {buttonText}
+      </button>
+    )
+  };
 
 export default Button;

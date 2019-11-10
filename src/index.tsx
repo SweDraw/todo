@@ -10,7 +10,7 @@ import App from "./component/App";
 import {ThemeProvider} from "./context/theme";
 
 // * All project style
-import './style/normalize.css';
+import './style/root.scss';
 
 // * Redux
 import Store from './store';

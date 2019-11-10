@@ -4,12 +4,13 @@ $end-point: 667%;
 $animation-time: .7s;
 
 :root{
-  --button-color: white;
+  --button-color: black;
 }
 
 .button {
   position: relative;
   overflow: hidden;
+  outline: none;
 
   background: none;
   color: var(--button-color);
@@ -18,7 +19,6 @@ $animation-time: .7s;
   border-radius: .5em;
   font-size: 1.2em;
   padding: .2em .5em;
-
   transition: $animation-time;
 
   &:before {
@@ -44,16 +44,16 @@ $animation-time: .7s;
     transform: skewX($slide-skew) translateX($end-point);
   }
 
-  &--theme-dark{
-    --button-color: black;
+  &:hover{
+    cursor: pointer;
   }
 
   // * color button type
-  &#{&}--background-blue:hover {
+  &#{&}--blue:hover {
     background-color: #2286d6;
   }
 
-  &#{&}--background-green:hover {
+  &#{&}--green:hover {
     background-color: #2bae2b;
   }
 

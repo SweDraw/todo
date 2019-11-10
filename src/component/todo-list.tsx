@@ -8,7 +8,7 @@ export type TodoListProps = {};
 
 const TodoList: FC<TodoListReduxProps> = ({filter, list}) => {
 
-  const todoList = list.filter((todo: Todo) => todo.id !== filter);
+  const todoList = list.filter((todo: Todo) => todo.task.indexOf(filter) !== -1);
 
   const transition = useTransition(todoList, (todo: Todo) => todo.id, {
     from: {opacity: 0},

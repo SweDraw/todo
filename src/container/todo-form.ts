@@ -1,14 +1,12 @@
-import {connect} from "react-redux";
-import {addTodo} from "../actions/todo";
-import TodoForm, {TodoCreateFormProps} from "../component/todo-form";
+// * Lib
+import {reduxForm, InjectedFormProps} from "redux-form";
+// * Component
+import TodoForm, {TodoFormProps} from "../component/todo-form";
+// * Redux-form parameter
+import {TodoParameter} from "../types/todo";
 
-const mapDispatchToProps = {
-  addTodo
-};
+// * Add redux-form parameter
+type ReduxFormProps = InjectedFormProps<TodoParameter> & TodoFormProps;
+export type TodoFormReduxProps = ReduxFormProps
 
-
-export type TodoCreateFormReduxProps =
-  TodoCreateFormProps
-  & typeof mapDispatchToProps;
-
-export default connect(undefined, mapDispatchToProps)(TodoForm)
+export default reduxForm<TodoParameter, TodoFormProps>({ form: 'todo-form'})(TodoForm);

@@ -6,10 +6,6 @@
   background-color: var(--todo-form-background);
   padding: .5em;
 
-  &--dark{
-    --todo-form-background: black;
-  }
-
   > *+* {
     margin-top: .2em;
   }

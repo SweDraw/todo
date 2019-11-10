@@ -1,0 +1,18 @@
+.dark{
+  // ----- Button component color from border and text ----- //
+  --button-color: white;
+
+  // ----- Hide component ----- //
+  // * hide component background
+  --hide-component-background: white;
+  --hide-wrapper-background:rgba(58, 55, 55, 0.55);
+  // * Hide button parameter
+  --hide-button-background: initial;
+  --hide-button-color: black;
+  // * Show button
+  --show-button-background: lightgreen;
+  --show-button-color: white;
+
+  // ----- Todo form background-color ----- //
+  --todo-form-background: black;
+}
