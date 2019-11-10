@@ -1,9 +1,13 @@
+// * Lib
 import React, {FC} from "react";
-import TodoItem from "../container/todo-item";
 import {useTransition} from "react-spring";
+// * Component
+import TodoItem from "../container/todo-item";
+// * Style
+import '../style/todo-list.scss';
+// * Type
 import {TodoListReduxProps} from '../container/todo-list';
 import {Todo} from "../types/todo";
-
 export type TodoListProps = {};
 
 const TodoList: FC<TodoListReduxProps> = ({filter, list}) => {

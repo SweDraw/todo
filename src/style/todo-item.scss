@@ -1,0 +1,29 @@
+:root{
+  --todo-item-background: none;
+  --todo-item-color: black;
+}
+.todo-item {
+  padding: .75em 1.25em ;
+  box-shadow: inset 0 0 5px 0 rgba(140, 133, 133, 1);
+  border-radius: .75em;
+  background: var(--todo-item-background);
+  > * + * {
+    margin-left: .25em;
+  }
+
+  &__task {
+    font-size: var(--font-size);
+    color: var(--todo-item-color);
+  }
+
+  &__remove {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-shadow: 0 0 5px 0 rgba(255, 0, 0, .6);
+    background-color: initial;
+    margin-right: .25em;
+    width: 1em;
+    height: 1em;
+  }
+}

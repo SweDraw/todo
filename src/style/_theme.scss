@@ -1,18 +1,42 @@
-.dark{
+:root {
+  --root-background: white;
+}
+
+#root {
+  > * {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--root-background);
+  }
+}
+
+.dark {
+  // ----- Root ----- //
+  --root-background: black;
+  // ----- Top bar ----- //
+  --top-bar-background: rgba(255, 255, 255, .2);
   // ----- Button component color from border and text ----- //
   --button-color: white;
-
   // ----- Hide component ----- //
   // * hide component background
-  --hide-component-background: white;
-  --hide-wrapper-background:rgba(58, 55, 55, 0.55);
+  --hide-component-background: black;
+  --hide-wrapper-background: rgba(58, 55, 55, 0.95);
   // * Hide button parameter
   --hide-button-background: initial;
-  --hide-button-color: black;
+  --hide-button-color: white;
   // * Show button
-  --show-button-background: lightgreen;
+  --show-button-background: initial;
   --show-button-color: white;
 
   // ----- Todo form background-color ----- //
   --todo-form-background: black;
+
+  // ----- Field ----- //
+  --field-main-color: white;
+  --field-hover-color: #969696;
+
+  // ----- Todo item ----- //
+  --todo-item-color: white;
+  --todo-item-background: rgba(255, 255, 255, .3)
+
 }

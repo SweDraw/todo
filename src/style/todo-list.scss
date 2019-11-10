@@ -1,0 +1,6 @@
+.todo-list{
+  padding: .5em;
+  > *+* {
+    margin-top: .5em;
+  }
+}

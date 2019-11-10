@@ -26,9 +26,11 @@ $hover-bottom-position: 1/$hover-font-size;
   &__input {
     border: none;
     border-bottom: 2px solid var(--field-main-color);
+    color: var(--field-main-color);
     transition: border-bottom-color ease-in-out var(--field-animation-time);
     margin-top: #{$hover-font-size + .1}em;
     -webkit-appearance: none;
+    background: none;
 
     &:not(:placeholder-shown) ~ #{$this}__text {
       bottom: #{$hover-bottom-position + .1}em;

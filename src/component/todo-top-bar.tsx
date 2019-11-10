@@ -5,6 +5,8 @@ import ID from 'uniqid';
 import Filter from "./filter";
 import HideComponent from "./hide-component";
 import TodoCreateForm from "../container/todo-form";
+// * Style
+import '../style/top-bar.scss';
 // * Types
 import {TodoParameter} from "../types/todo";
 import {TodoTopBarReduxProps} from "../container/todo-top-bar";

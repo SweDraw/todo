@@ -1,0 +1,10 @@
+:root{
+   --top-bar-background: gainsboro;
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  background-color: var(--top-bar-background);
+}

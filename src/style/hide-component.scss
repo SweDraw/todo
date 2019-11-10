@@ -51,6 +51,9 @@
   }
 
   &__show-button {
+    margin: .25em;
+    padding: .25em;
+    display: flex;
     border: none;
     background-color: var(--show-button-background);
     color: var(--show-button-color);
